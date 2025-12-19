@@ -1,27 +1,25 @@
-# Python
-__pycache__/
-*.py[cod]
-*.so
-*.egg
-*.egg-info/
-dist/
-build/
-
-# Environments
-venv/
-env/
-*.env
+# ENV files (all envs everywhere)
 .env
+.env.*
+**/.env
+**/.env.*
 
-# Django
-*.sqlite3
-db.sqlite3
-media/
+# Python virtual environments
+.venv/
+**/.venv/
 
-# IDEs
-.vscode/
-.idea/
-*.swp
+# Node
+node_modules/
 
 # Logs
-*.log
+npm-debug.log*
+yarn-debug.log*
+pnpm-debug.log*
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Editor
+.vscode/
+.idea/
