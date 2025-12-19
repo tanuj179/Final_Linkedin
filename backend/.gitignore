@@ -1,25 +1,22 @@
-# ENV files (all envs everywhere)
+# Django / Python
+*.pyc
+__pycache__/
+
+# Local database
+backend/db.sqlite3
+
+# User-uploaded media
+backend/media/
+
+# Environments
 .env
 .env.*
-**/.env
-**/.env.*
-
-# Python virtual environments
+backend/venv/
+venv/
 .venv/
-**/.venv/
+env/
+ENV/
 
-# Node
-node_modules/
-
-# Logs
-npm-debug.log*
-yarn-debug.log*
-pnpm-debug.log*
-
-# OS
-.DS_Store
-Thumbs.db
-
-# Editor
+# VS Code / IDE
 .vscode/
 .idea/
