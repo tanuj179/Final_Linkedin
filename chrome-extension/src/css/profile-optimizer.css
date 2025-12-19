@@ -1,0 +1,217 @@
+/* Profile Optimizer Button Styles (Mirrored from Save Lead) */
+.lp-optimize-btn {
+  position: fixed !important;
+  left: auto !important;      /* Override any left positioning */
+  right: 20px !important;     /* Position on right */
+  bottom: 100px !important;   /* Position from bottom */
+  top: auto !important;       /* Clear top */
+  z-index: 999999 !important;
+  width: 56px !important;
+  height: 56px !important;
+  border-radius: 50% !important;
+  background: linear-gradient(135deg, #0a66c2, #0957a8) !important;
+  color: #fff !important;
+  display: none; /* Controlled by JS */
+  align-items: center !important;
+  justify-content: center !important;
+  cursor: pointer !important;
+  box-shadow: 0 4px 16px rgba(10,102,194,0.4) !important;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1) !important;
+  font-size: 26px !important;
+  border: 3px solid #fff !important;
+}
+
+.lp-optimize-btn:hover {
+  transform: translateY(-3px) scale(1.05) !important;
+  box-shadow: 0 8px 24px rgba(10,102,194,0.5) !important;
+}
+
+.lp-optimize-btn:active {
+  transform: translateY(-1px) scale(1.02) !important;
+}
+
+/* Profile Optimizer Modal (Consistent with Save Lead Modal) */
+.lp-optimize-modal {
+  position: fixed !important;
+  left: auto !important;      /* Override any left positioning */
+  right: 20px !important;     /* Align with right side */
+  bottom: 170px !important;   /* Appear above the button */
+  top: auto !important;       /* Clear top */
+  z-index: 999999 !important;
+  width: 360px !important;
+  max-width: calc(100vw - 40px) !important;
+  background: #fff !important;
+  border-radius: 16px !important;
+  padding: 24px !important;
+  box-shadow: 0 12px 40px rgba(0,0,0,0.15) !important;
+  display: none; /* Controlled by JS */
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif !important;
+  border: 1px solid #e5e7eb !important;
+  animation: lp-slideInFromRight 0.3s ease !important;
+}
+
+@keyframes lp-slideInFromRight {
+  from {
+    opacity: 0;
+    transform: translateX(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+.lp-optimize-modal h4 {
+  margin: 0 0 18px 0;
+  font-size: 17px;
+  font-weight: 600;
+  color: #111827;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding-bottom: 12px;
+  border-bottom: 2px solid #f3f4f6;
+}
+
+.lp-optimize-modal h4 span {
+  font-size: 22px;
+}
+
+/* Warning Box - Reusing consistent styles */
+.lp-warning-box {
+  background: #fff3cd; /* Yellow background for warning */
+  color: #856404; /* Dark yellow text */
+  padding: 12px;
+  border-radius: 8px;
+  font-size: 13px;
+  margin-bottom: 18px; /* Consistent spacing */
+  border: 1px solid #ffeaa7;
+}
+
+.lp-warning-box ul {
+  margin: 6px 0 0;
+  padding-left: 18px;
+  line-height: 1.5;
+}
+
+.lp-warning-box ul li {
+  margin-bottom: 4px;
+}
+
+.lp-warning-box small {
+  display: block;
+  margin-top: 8px;
+  font-size: 11px;
+  color: #6b7280;
+}
+
+
+/* Form Group Styling - Consistent */
+.lp-optimize-modal .form-group {
+  margin-bottom: 14px;
+}
+
+/* Checkbox group styling */
+.lp-optimize-modal .lp-checkbox-group label {
+  display: flex; /* Aligns checkbox and text */
+  align-items: center;
+  font-size: 13px;
+  font-weight: 600;
+  color: #374151;
+  cursor: pointer; /* Indicate it's clickable */
+  user-select: none; /* Prevent text selection on click */
+}
+
+.lp-optimize-modal .lp-checkbox-group input[type="checkbox"] {
+  margin-right: 8px; /* Space between checkbox and label text */
+  accent-color: #0a66c2; /* LinkedIn blue accent color */
+  width: 16px;
+  height: 16px;
+  flex-shrink: 0; /* Prevent checkbox from shrinking */
+}
+
+
+/* Action Button (e.g., Take Screenshot) - Consistent Primary Button Style */
+.lp-optimize-modal .lp-button-action {
+  width: 100%; /* Full width */
+  padding: 11px 18px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 600;
+  border: none;
+  transition: all 0.2s;
+  background: linear-gradient(135deg, #0a66c2, #0957a8); /* LinkedIn Blue */
+  color: #fff;
+}
+
+.lp-optimize-modal .lp-button-action:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(10,102,194,0.3);
+}
+
+.lp-optimize-modal .lp-button-action:disabled {
+  opacity: 1;
+  cursor: pointer;
+  transform: none;
+  box-shadow: none;
+}
+
+/* Button Row - Consistent with Save Lead Modal */
+.lp-optimize-modal .button-row {
+  display: flex;
+  gap: 10px;
+  margin-top: 18px;
+}
+
+.lp-optimize-modal .button-row button {
+  flex: 1;
+  padding: 11px 18px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 600;
+  border: none;
+  transition: all 0.2s;
+}
+
+.lp-optimize-modal .btn-cancel { /* Cancel button */
+  background: #f3f4f6;
+  color: #6b7280;
+}
+
+.lp-optimize-modal .btn-cancel:hover {
+  background: #e5e7eb;
+  color: #374151;
+}
+
+.lp-optimize-modal .btn-save { /* Upload & Optimize button */
+  background: linear-gradient(135deg, #0a66c2, #0957a8); /* LinkedIn Blue */
+  color: #fff;
+}
+
+.lp-optimize-modal .btn-save:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(10,102,194,0.3);
+}
+
+.lp-optimize-modal .btn-save:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+  transform: none;
+  box-shadow: none;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .lp-optimize-modal {
+    left: 10px;
+    right: 10px;
+    top: 20px; /* Positioned from top on mobile */
+    width: auto;
+    max-width: calc(100vw - 20px);
+  }
+  .lp-optimize-btn {
+    right: 10px;
+    bottom: 80px; /* Consistent with desktop on smaller screens, just responsive margins */
+  }
+}

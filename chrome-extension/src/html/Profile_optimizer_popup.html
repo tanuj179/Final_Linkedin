@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>LinkedIn Productivity — Profile Optimizer</title>
+  <link rel="stylesheet" href="../css/profile-optimizer-popup.css">
+</head>
+<body>
+  <div class="wrap">
+    <header class="hero">
+      <div class="hero-content">
+        <h1 class="product-title">
+          LinkedIn <span class="product-accent">Productivity</span>
+        </h1>
+        <p class="tagline">
+          Profile Optimizer · Analyze your LinkedIn profile quality.
+        </p>
+      </div>
+    </header>
+
+    <div class="card">
+      <p id="lp-prof-status" class="status-text">
+        Checking if you are logged in and on a LinkedIn profile...
+      </p>
+
+      <div class="warning-box">
+        <strong class="warning-title">⚠️ Before you start:</strong>
+        <ul class="hint-list">
+          <li>Click <strong>"See more"</strong> in About & Experience</li>
+          <li>Scroll through your entire profile to load all sections</li>
+          <li>Close any popups covering your profile</li>
+        </ul>
+      </div>
+
+      <button id="lp-prof-main-btn" class="btn primary" disabled>
+        🎯 Analyze this profile
+      </button>
+    </div>
+  </div>
+
+  <script src="../js/tokenManager.js"></script>
+  <script src="../js/profile_optimizer_popup.js"></script>
+</body>
+</html>

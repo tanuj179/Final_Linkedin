@@ -1,0 +1,59 @@
+{
+  "manifest_version": 3,
+  "name": "LinkedIn Productivity",
+  "version": "0.2.1",
+  "description": "UI-first Chrome extension (popup + runtime skeleton).",
+  "action": {
+    "default_popup": "src/html/popup.html",
+    "default_title": "LinkedIn Productivity"
+  },
+  "permissions": [
+    "storage",
+    "tabs",
+    "activeTab",
+    "scripting",
+    "identity"
+  ],
+  "host_permissions": [
+    "<all_urls>"
+  ],
+  "background": {
+    "service_worker": "src/js/service_worker.js"
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "https://www.linkedin.com/*"
+      ],
+      "js": [
+        "src/js/tokenManager.js",
+        "src/js/ui_helpers.js",
+        "src/js/screenshot_engine.js",
+        "src/js/save_lead.js",
+        "src/js/profile_optimizer.js",
+        "src/js/comment_helper.js"
+      ],
+      "css": [
+        "src/css/save-lead.css",
+        "src/css/profile-optimizer.css",
+        "src/css/comment-helper.css"
+      ],
+      "run_at": "document_idle"
+    },
+    {
+      "matches": [
+        "http://127.0.0.1:8000/dashboard/*"
+      ],
+      "js": [
+        "src/js/tokenManager.js",
+        "src/js/content_script.js"
+      ],
+      "run_at": "document_idle"
+    }
+  ],
+  "icons": {
+    "16": "src/icons/16.png",
+    "48": "src/icons/32.png",
+    "128": "src/icons/48.png"
+  }
+}

@@ -1,0 +1,195 @@
+/* Save Lead Button Styles */
+.lp-save-lead-btn { 
+  position: fixed; 
+  left: 20px; 
+  bottom: 100px; 
+  z-index: 999999; 
+  width: 56px; 
+  height: 56px; 
+  border-radius: 50%; 
+  background: linear-gradient(135deg, #10b981, #059669); 
+  color: #fff; 
+  display: none; 
+  align-items: center; 
+  justify-content: center; 
+  cursor: pointer; 
+  box-shadow: 0 4px 16px rgba(16,185,129,0.4); 
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1); 
+  font-size: 26px;
+  border: 3px solid #fff;
+}
+
+.lp-save-lead-btn:hover { 
+  transform: translateY(-3px) scale(1.05); 
+  box-shadow: 0 8px 24px rgba(16,185,129,0.5); 
+}
+
+.lp-save-lead-btn:active { 
+  transform: translateY(-1px) scale(1.02); 
+}
+
+/* Save Lead Modal */
+.lp-save-modal { 
+  position: fixed; 
+  left: 20px; 
+  bottom: 170px; 
+  z-index: 999999; 
+  width: 360px; 
+  max-width: calc(100vw - 40px); 
+  background: #fff; 
+  border-radius: 16px; 
+  padding: 24px; 
+  box-shadow: 0 12px 40px rgba(0,0,0,0.15); 
+  display: none; 
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  border: 1px solid #e5e7eb;
+  animation: slideUp 0.3s ease;
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.lp-save-modal h4 { 
+  margin: 0 0 18px 0; 
+  font-size: 17px; 
+  font-weight: 600; 
+  color: #111827; 
+  display: flex; 
+  align-items: center; 
+  gap: 10px; 
+  padding-bottom: 12px;
+  border-bottom: 2px solid #f3f4f6;
+}
+
+.lp-save-modal h4 span {
+  font-size: 22px;
+}
+
+.lp-save-modal .form-group { 
+  margin-bottom: 14px; 
+}
+
+.lp-save-modal label { 
+  display: block; 
+  margin-bottom: 6px; 
+  font-size: 13px; 
+  font-weight: 600; 
+  color: #374151; 
+}
+
+.lp-save-modal input { 
+  width: 100%; 
+  padding: 10px 12px; 
+  border: 2px solid #e5e7eb; 
+  border-radius: 8px; 
+  font-size: 14px; 
+  font-family: inherit; 
+  box-sizing: border-box; 
+  transition: all 0.2s; 
+}
+
+.lp-save-modal input:focus { 
+  outline: none; 
+  border-color: #10b981; 
+  box-shadow: 0 0 0 3px rgba(16,185,129,0.1);
+}
+
+.lp-save-modal input:read-only { 
+  background: #f9fafb; 
+  color: #6b7280; 
+  cursor: not-allowed; 
+  border-color: #f3f4f6;
+}
+
+.lp-save-modal .button-row { 
+  display: flex; 
+  gap: 10px; 
+  margin-top: 18px; 
+}
+
+.lp-save-modal button { 
+  flex: 1;
+  padding: 11px 18px; 
+  border-radius: 8px; 
+  cursor: pointer; 
+  font-size: 14px; 
+  font-weight: 600; 
+  border: none; 
+  transition: all 0.2s; 
+}
+
+.lp-save-modal .btn-cancel { 
+  background: #f3f4f6; 
+  color: #6b7280; 
+}
+
+.lp-save-modal .btn-cancel:hover { 
+  background: #e5e7eb; 
+  color: #374151;
+}
+
+.lp-save-modal .btn-save { 
+  background: linear-gradient(135deg, #10b981, #059669); 
+  color: #fff; 
+}
+
+.lp-save-modal .btn-save:hover { 
+  transform: translateY(-2px); 
+  box-shadow: 0 6px 16px rgba(16,185,129,0.3); 
+}
+
+.lp-save-modal .btn-save:disabled { 
+  opacity: 0.6; 
+  cursor: not-allowed; 
+  transform: none;
+}
+
+/* Toast Notification */
+.lp-toast {
+  position: fixed;
+  top: 80px;
+  right: 20px;
+  background: #1f2937;
+  color: #fff;
+  padding: 14px 18px;
+  border-radius: 10px;
+  z-index: 10000000;
+  font-size: 14px;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+  animation: slideInRight 0.3s ease;
+  max-width: 320px;
+}
+
+@keyframes slideInRight {
+  from {
+    transform: translateX(400px);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .lp-save-modal {
+    left: 10px;
+    right: 10px;
+    width: auto;
+    max-width: calc(100vw - 20px);
+  }
+  .lp-save-lead-btn {
+    left: 10px;
+    bottom: 80px;
+  }
+}

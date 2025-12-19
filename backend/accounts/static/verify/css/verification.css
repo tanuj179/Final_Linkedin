@@ -1,0 +1,241 @@
+/**
+ * Email Verification Page Styles
+ * Centered, clean design with Bootstrap
+ */
+
+/* ========================================
+   CSS Variables
+   ======================================== */
+:root {
+    --primary-color: #7c3aed;
+    --primary-dark: #6d28d9;
+    --success-color: #10b981;
+    --text-primary: #1f2937;
+    --text-muted: #6b7280;
+    --bg-gradient: linear-gradient(135deg, #faf5ff 0%, #f0f9ff 100%);
+}
+
+/* ========================================
+   Global Styles
+   ======================================== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    background: var(--bg-gradient);
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* ========================================
+   Verification Container
+   ======================================== */
+.verification-container {
+    width: 100%;
+    padding: 2rem 1rem;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* ========================================
+   Verification Card
+   ======================================== */
+.verification-card {
+    border: none;
+    border-radius: 16px;
+    overflow: hidden;
+}
+
+.verification-card .card-body {
+    background: white;
+}
+
+/* ========================================
+   Verification Icon
+   ======================================== */
+.verification-icon {
+    width: 80px;
+    height: 80px;
+    background: linear-gradient(135deg, var(--primary-color), #ec4899);
+    border-radius: 50%;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 2.5rem;
+    box-shadow: 0 10px 30px rgba(124, 58, 237, 0.3);
+    animation: pulse 2s ease-in-out infinite;
+}
+
+/* ========================================
+   Typography
+   ======================================== */
+h1 {
+    font-size: 1.75rem;
+    font-weight: 700;
+    color: var(--text-primary);
+}
+
+.text-muted {
+    color: var(--text-muted) !important;
+}
+
+/* ========================================
+   Verify Button
+   ======================================== */
+.btn-verify {
+    background: linear-gradient(135deg, var(--primary-color), var(--primary-dark));
+    border: none;
+    color: white;
+    font-weight: 600;
+    padding: 0.875rem 2.5rem;
+    border-radius: 10px;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(124, 58, 237, 0.3);
+}
+
+.btn-verify:hover {
+    background: linear-gradient(135deg, var(--primary-dark), var(--primary-color));
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(124, 58, 237, 0.4);
+    color: white;
+}
+
+.btn-verify:focus {
+    outline: 3px solid rgba(124, 58, 237, 0.5);
+    outline-offset: 3px;
+    color: white;
+}
+
+.btn-verify:active {
+    transform: translateY(0);
+}
+
+.btn-verify:disabled {
+    background: #d1d5db;
+    cursor: not-allowed;
+    box-shadow: none;
+}
+
+/* ========================================
+   Success Message
+   ======================================== */
+.verification-success {
+    border-radius: 10px;
+    border: 2px solid var(--success-color);
+    background-color: #f0fdf4;
+    color: #065f46;
+    display: flex;
+    align-items: center;
+    animation: slideDown 0.5s ease;
+}
+
+.verification-success i {
+    color: var(--success-color);
+    font-size: 1.25rem;
+}
+
+/* ========================================
+   Footer Link
+   ======================================== */
+.verification-container a {
+    color: var(--primary-color);
+    transition: color 0.3s ease;
+}
+
+.verification-container a:hover {
+    color: var(--primary-dark);
+}
+
+/* ========================================
+   Animations
+   ======================================== */
+@keyframes pulse {
+    0%, 100% {
+        transform: scale(1);
+        box-shadow: 0 10px 30px rgba(124, 58, 237, 0.3);
+    }
+    50% {
+        transform: scale(1.05);
+        box-shadow: 0 15px 40px rgba(124, 58, 237, 0.4);
+    }
+}
+
+@keyframes slideDown {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* ========================================
+   Responsive Design
+   ======================================== */
+
+/* Tablets and below */
+@media (max-width: 767.98px) {
+    h1 {
+        font-size: 1.5rem;
+    }
+    
+    .verification-icon {
+        width: 70px;
+        height: 70px;
+        font-size: 2rem;
+    }
+    
+    .btn-verify {
+        padding: 0.75rem 2rem;
+        font-size: 0.95rem;
+        width: 100%;
+    }
+    
+    .verification-card .card-body {
+        padding: 2rem 1.5rem !important;
+    }
+}
+
+/* Small mobile devices */
+@media (max-width: 575.98px) {
+    .verification-container {
+        padding: 1rem;
+    }
+    
+    h1 {
+        font-size: 1.375rem;
+    }
+    
+    .verification-icon {
+        width: 60px;
+        height: 60px;
+        font-size: 1.75rem;
+    }
+}
+
+/* ========================================
+   Accessibility
+   ======================================== */
+
+/* Reduced motion for users who prefer it */
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
+}

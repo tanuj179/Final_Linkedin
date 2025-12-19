@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>LinkedIn Productivity — Auth</title>
+  <link rel="stylesheet" href="../css/popup.css">
+</head>
+<body>
+  <div class="wrap">
+    <header class="hero">
+      <div class="hero-content">
+        <h1 class="product-title">LinkedIn <span class="product-accent">Productivity</span></h1>
+        <p class="tagline">Write better comments • Save leads • Improve your profile</p>
+      </div>
+    </header>
+
+    <div class="card">
+
+      <div class="tabs">
+        <button id="tab-login" class="tab" aria-selected="false">Login</button>
+        <button id="tab-register" class="tab active" aria-selected="true">Register</button>
+      </div>
+
+      <!-- LOGIN -->
+      <div id="panel-login" class="panel hidden">
+        <h3 class="title">Login</h3>
+
+        <label class="field">
+          <span class="label">Email</span>
+          <input id="login-email" type="email" placeholder="you@gmail.com" autocomplete="username" />
+        </label>
+
+        <label class="field">
+          <span class="label">Password</span>
+          <input id="login-password" type="password" placeholder="Password" autocomplete="current-password" />
+        </label>
+
+        <button id="btn-login" class="btn primary" disabled>Login</button>
+      </div>
+
+      <!-- REGISTER (default) -->
+      <div id="panel-register" class="panel">
+        <h3 class="title">Register</h3>
+
+        <label class="field">
+          <span class="label">Full name</span>
+          <input id="reg-name" type="text" placeholder="Full name" />
+        </label>
+
+        <label class="field">
+          <span class="label">Email</span>
+          <input id="reg-email" type="email" placeholder="you@gmail.com" autocomplete="email" />
+        </label>
+
+        <label class="field">
+          <span class="label">Password</span>
+          <input id="reg-password" type="password" placeholder="Create a password" autocomplete="new-password" />
+
+          <!-- ONLY the strength bar -->
+          <div class="pw-compact">
+            <div class="progress small">
+              <div id="pw-strength" class="progress-bar"></div>
+            </div>
+            <div id="pw-label" class="pw-label">Too short</div>
+          </div>
+        </label>
+
+        <button id="btn-register" class="btn outline" disabled>Register</button>
+      </div>
+      <div id="register-message" class="register-message" style="margin-top:10px;"></div>
+    </div>
+  </div>
+
+  <script src="../js/popup.js"></script>
+  <script src="../js/tokenManager.js"></script>
+  <script src="../js/popup.js"></script>
+
+</body>
+</html>
